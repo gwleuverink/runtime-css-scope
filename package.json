@@ -1,0 +1,33 @@
+{
+  "name": "static-style-scope",
+  "version": "0.0.1",
+  "description": "This package makes it possible to scope style tags on the fly. Are you working in an old code base and have some trouble with specificity? Maybe you're just old school and don't use a modern build system? This package can help!",
+  "main": "index.js",
+  "scripts": {
+    "watch": "rollup -c -w",
+    "build": "concurrently \"rollup -c\" \"npx rollup -c rollup-ie11.config.js\"",
+    "test": "npx jest",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gwleuverink/static-css-scope.git"
+  },
+  "author": "Willem Leuverink",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gwleuverink/static-css-scope/issues"
+  },
+  "homepage": "https://github.com/gwleuverink/static-css-scope#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "rollup": "^1.32.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-filesize": "^6.2.1",
+    "rollup-plugin-strip-code": "^0.2.7",
+    "rollup-plugin-terser": "^5.2.0"
+  },
+  "dependencies": {
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
