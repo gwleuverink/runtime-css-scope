@@ -53,7 +53,7 @@ The example above wil magically turn into:
 You are probably wondering if it's a good idea to parse and lex CSS after the DOM has loaded. The answer is simple, probably not. But since you are already working in a shitty codebase performance is probably your last concern. It's time to get shit done over here.
 
 ## What the package aims to do to mitigate performance issues
-Style tags are parsed once and it's original checksum is stored so the scoped content can be loaded from cache on subsequent visits.
+Nothing yet. In the future style tags should be parsed once and it's original checksum is stored so the scoped content can be loaded from cache on subsequent visits.
 
 ## Is adding dynamic markup inside the document an issue?
 Nope, we use mutation observer to mitigate that
