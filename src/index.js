@@ -1,7 +1,7 @@
 import Component from './component'
 import { domReady, isTesting } from './utils'
 
-// Initialization logic blatantly stolen from alpine js:
+// DOM walking logic borrowed from alpine js:
 // https://github.com/alpinejs/alpine/blob/master/src/index.js
 const CssScope = {
     init: async function () {

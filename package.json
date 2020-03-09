@@ -2,10 +2,10 @@
   "name": "runtime-css-scope",
   "version": "0.0.1",
   "description": "This package makes it possible to scope style tags on the fly. Are you working in an old code base and have some trouble with specificity? Maybe you're just old school and don't use a modern build system? This package can help!",
-  "main": "index.js",
+  "main": "dist/runtime-css-scope.js",
   "scripts": {
     "watch": "rollup -c -w",
-    "build": "concurrently \"rollup -c\" \"npx rollup -c rollup-ie11.config.js\"",
+    "build": "rollup -c",
     "test": "npx jest",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.7",
+    "@testing-library/dom": "^6.15.0",
     "rollup": "^1.32.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-filesize": "^6.2.1",

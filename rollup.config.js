@@ -7,7 +7,7 @@ import stripCode from 'rollup-plugin-strip-code';
 export default {
     input: 'src/index.js',
     output: {
-        name: 'CssScope',
+        name: 'Runtime CSS Scope',
         file: 'dist/runtime-css-scope.js',
         format: 'umd',
         sourcemap: true,
