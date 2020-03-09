@@ -27,3 +27,11 @@ export function walk(el, callback) {
         node = node.nextElementSibling
     }
 }
+
+export function getScopeAttrs(el) {
+    return Array.from(el.attributes).filter(attr => {
+        const attrRE = /data-scope-[a-z0-9]+/
+
+        return attrRE.test(attr.name)
+    })
+}

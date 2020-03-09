@@ -1,17 +1,19 @@
-import { walk } from './utils'
+import { walk, getScopeAttrs } from './utils'
+import StyleScopeFactory from './style-scope-factory'
 
 export default class Component {
 
     constructor(el) {
         this.el = el
         const styleElement = document.querySelector('#' + this.el.getAttribute('data-css-scope'))
-
-        // this.sheet = this.generateScopedSheet(styleElement)
-        // this.scopeElements(this.el, this.sheet.scope)
-        this.scopeElements(this.el, '1234')
+        
+        // Get a scope id (and scope the sheet if not done so before)
+        const factory = new StyleScopeFactory(styleElement)
+        this.scopeId = factory.build()
+        this.scopeElements(this.el, this.scopeId)
 
         // Use mutation observer to detect new elements being added within this component at run-time.
-        this.listenForNewElementsToScope('1234')
+        this.listenForNewElementsToScope(this.scopeId)
     }
 
     walkAndSkipNestedComponents(el, callback, initializeComponentCallback = () => { }) {
@@ -42,17 +44,9 @@ export default class Component {
 
     scopeElement(el, cssScope) {
         // Make sure only one scope attribute can exist on the element (in case someone starts tinkering with the dom)
-        this.getScopeAttrs(el).forEach(attr => el.removeAttribute(attr))
+        getScopeAttrs(el).forEach(attr => el.removeAttribute(attr))
 
         el.setAttribute(`data-scope-${cssScope}`, '')
-    }
-
-    getScopeAttrs(el) {
-        return Array.from(el.attributes).filter(attr => {
-            const attrRE = /data-scope-[a-z0-9]+/
-
-            return attrRE.test(attr.name)
-        })
     }
 
     listenForNewElementsToScope(cssScope) {
