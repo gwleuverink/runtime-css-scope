@@ -3,7 +3,7 @@ import { domReady, isTesting } from './utils'
 
 // Initialization logic blatantly stolen from alpine js:
 // https://github.com/alpinejs/alpine/blob/master/src/index.js
-const RuntimeCssScope = {
+const CssScope = {
     init: async function () {
         if (!isTesting()) {
             await domReady()
@@ -75,8 +75,8 @@ const RuntimeCssScope = {
 }
 
 if (!isTesting()) {
-    window.RuntimeCssScope = RuntimeCssScope
-    window.RuntimeCssScope.init()
+    window.CssScope = CssScope
+    window.CssScope.init()
 }
 
-export default RuntimeCssScope
+export default CssScope
