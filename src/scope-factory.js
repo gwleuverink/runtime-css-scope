@@ -1,4 +1,4 @@
-export default class StyleScopeFactory {
+export default class ScopeFactory {
     constructor(el) {
         this.el = el;
     }
@@ -39,7 +39,6 @@ export default class StyleScopeFactory {
     generateScopedRules(sheet, scopedAttrSelector) {
         const rules = sheet.rules || sheet.cssRules;
 
-        // Replace every rule with a freshly scoped rule
         const scopedRules = Object.values(rules).map((rule, index) => {
             
             if (rule instanceof CSSMediaRule) {

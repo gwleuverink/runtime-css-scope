@@ -1,5 +1,5 @@
 import { walk, getScopeAttrs } from './utils'
-import StyleScopeFactory from './style-scope-factory'
+import ScopeFactory from './scope-factory'
 
 export default class Component {
 
@@ -8,7 +8,7 @@ export default class Component {
         const styleElement = document.querySelector('#' + this.el.getAttribute('data-css-scope'))
         
         // Get a scope id (and scope the sheet if not done so before)
-        const factory = new StyleScopeFactory(styleElement)
+        const factory = new ScopeFactory(styleElement)
         this.scopeId = factory.build()
         this.scopeElements(this.el, this.scopeId)
 
