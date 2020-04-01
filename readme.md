@@ -55,6 +55,16 @@ The example above wil magically turn into:
 </style>
 ```
 
+## Supported CSS rule types
+Right now we support the following:
+1. Regular style rules (also with complex patterns like child/sibling/pseudo selectors)
+2. Media rules
+
+On the roadmap we have:
+1. Keyframes
+2. Keyframe
+
+**The @import rule is not supported by design.** These scoped components need to stay small and we believe adding @import makes it too easy for these components to grow out of hand. Implementing it in the future is not impossible.
 
 ## Should I use this library?
 You are probably wondering if it's a good idea to parse and lex CSS after the DOM has loaded. The answer is simple, probably not. 
