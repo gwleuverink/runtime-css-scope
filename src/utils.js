@@ -10,6 +10,7 @@ export function domReady() {
     })
 }
 
+// Borrowed from alpine js
 export function isTesting() {
     return navigator.userAgent, navigator.userAgent.includes("Node.js")
         || navigator.userAgent.includes("jsdom")
