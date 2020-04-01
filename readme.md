@@ -3,7 +3,7 @@
 Are you working in an old shitty codebase and those darn `!important`'s are driving you mad? This library aims to solve your woes!
 
 ## When would I use this library?
-When you are working with a perticularly pesky CSS codebase without a modern build system, specificity of new CSS components can become an issue. Of course the best way to go is to rewrite the CSS source, but most of the time reality isn't that perfect. 
+When you are working with a perticularly pesky CSS codebase without a modern build system, specificity of new CSS components can become an issue. Usually the best way to go is to rewrite the CSS source, but most of the time reality isn't that perfect. 
 
 Don't want to deal with it at all? No problem, use this library. But use it wisely.
 
