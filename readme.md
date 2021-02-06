@@ -1,5 +1,7 @@
 # Runtime CSS Scope
 
+**This is not ready for use in production**
+
 Are you working in an old shitty codebase and those darn `!important`'s are driving you mad? This library aims to solve your woes!
 
 ## When would I use this library?
