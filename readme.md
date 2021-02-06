@@ -12,7 +12,7 @@ Don't want to deal with it at all? No problem, use this library. But use it wise
 Below you see a html component with some terrible specificity creep 
 Simply add a `<style>` tag somewhere in the document with an id.
 
-Then all you need to do is add a data-css-scope="style-tag-id" to the root node you are having trouble with. That's it!
+Then add a data-css-scope="style-tag-id" to the node the sheet should apply to. That's it!
 
 ``` html
 <div data-css-scope="style-tag-id" class="component">
