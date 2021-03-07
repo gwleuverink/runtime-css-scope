@@ -9,6 +9,8 @@ When you are working with a perticularly pesky CSS codebase without a modern bui
 
 Don't want to deal with it at all? No problem, use this library. But use it wisely.
 
+## Disclaimer
+This library was a fun weekend project. My aim was to add scoped inline stylesheets to existing codebases without a templating layer, build pipeline or anything else. Just drop it on the page and it works like magic. That being said, i'll probably never work with it in client work. That means support wil be minimal. It is here for you to play with if you want though. Go have a blast!
 
 ## Usage
 Below you see a html component with some terrible specificity creep 
@@ -69,7 +71,7 @@ On the roadmap we have:
 **The @import rule is not supported by design.** These scoped components need to stay small and we believe adding @import makes it too easy for these components to grow out of hand. Implementing it in the future is not impossible.
 
 ## Should I use this library?
-You are probably wondering if it's a good idea to parse and lex CSS after the DOM has loaded. The answer is simple, probably not. 
+You are probably wondering if it's a good idea to parse and lex CSS after the DOM has loaded.. Well, probably not. 
 
 Using this library with not too largde CSS components sprinkled in your template will result in a minimal performance hit. You have to be mindfull though, scoping a 1 mb css string is not recommended. 
 
