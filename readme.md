@@ -73,7 +73,7 @@ On the roadmap we have:
 ## Should I use this library?
 You are probably wondering if it's a good idea to parse and lex CSS after the DOM has loaded.. Well, probably not. 
 
-Using this library with not too largde CSS components sprinkled in your template will result in a minimal performance hit. You have to be mindfull though, scoping a 1 mb css string is not recommended. 
+Using this library with not too large CSS components sprinkled in your template will result in a minimal performance hit. You have to be mindfull though, scoping a 1 mb css string is not recommended. 
 
 ## Is adding dynamic markup inside the document an issue?
 Nope, we use mutation observer to mitigate that. All markup gets a scope attribute assigned to it, even if it's dynamically added to the DOM after load.
